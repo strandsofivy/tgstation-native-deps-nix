@@ -74,15 +74,10 @@
         };
 
         packages = {
-          default =
-            dreamluau-crate
-            /*
-                                          pkgs.buildEnv {
-              name = "tgstation-native-deps";
-              paths = [rustg-crate dreamluau-crate];
-            }
-            */
-            ;
+          default = pkgs.buildEnv {
+            name = "tgstation-native-deps";
+            paths = [rustg-crate dreamluau-crate];
+          };
           byond = byond;
           librust-g = rustg-crate;
           libdreamluau = dreamluau-crate;
